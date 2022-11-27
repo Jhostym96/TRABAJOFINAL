@@ -115,8 +115,9 @@ function LandingPage() {
           <span className="visually-hidden">Next</span>
         </button>
       </div> */}
-
-      <Carrousel />
+      <div>
+        <Carrousel />
+      </div>
       <section id="about" className="about section-padding">
         <div className="container">
           <div className="row">
