@@ -12,6 +12,9 @@ import team1 from "../../image/assets/icons/team1.jpg";
 import team2 from "../../image/assets/icons/team2.jpg";
 import team3 from "../../image/assets/icons/team3.jpg";
 import team4 from "../../image/assets/icons/team4.jpg";
+import cancha1 from "../../image/assets/icons/Cancha1.jpg";
+import cancha2 from "../../image/assets/icons/Cancha2.jpg";
+import cancha3 from "../../image/assets/icons/Cancha3.jpg";
 
 function LandingPage() {
   return (
@@ -230,7 +233,12 @@ function LandingPage() {
               <div className="card text-light text-center bg-white pb-2">
                 <div className="card-body text-dark">
                   <div className="img-area mb-4">
-                    <img src={project1} className="img-fluid" alt="" />
+                    <img
+                      src={cancha1}
+                      className="img-fluid"
+                      alt=""
+                      style={{ borderRadius: 6}}
+                    />
                   </div>
                   <h3 className="card-title">Building Make</h3>
                   <p className="lead">
@@ -247,7 +255,12 @@ function LandingPage() {
               <div className="card text-light text-center bg-white pb-2">
                 <div className="card-body text-dark">
                   <div className="img-area mb-4">
-                    <img src={project2} className="img-fluid" alt="" />
+                    <img
+                      src={cancha2}
+                      className="img-fluid"
+                      alt=""
+                      style={{ borderRadius: 6}}
+                    />
                   </div>
                   <h3 className="card-title">Building Make</h3>
                   <p className="lead">
@@ -264,7 +277,12 @@ function LandingPage() {
               <div className="card text-light text-center bg-white pb-2">
                 <div className="card-body text-dark">
                   <div className="img-area mb-4">
-                    <img src={project3} className="img-fluid" alt="" />
+                    <img
+                      src={cancha3}
+                      className="img-fluid"
+                      alt=""
+                      style={{ borderRadius: 6}}
+                    />
                   </div>
                   <h3 className="card-title">Building Make</h3>
                   <p className="lead">

@@ -6,10 +6,4 @@ export { default as RegisterView } from "./Register";
 
 export { default as LandingPageView } from "./LandingPage";
 
-
-
-
-
-
-
-
+export { default as ProductView } from "./Product";
