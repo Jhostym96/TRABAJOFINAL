@@ -10,6 +10,7 @@ import {
   InterfaceView,
   LandingPageView,
   ProductView,
+  CartView,
 } from "../pages";
 
 import { MainLayout } from "../layout";
@@ -21,12 +22,13 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path="/" element={<LandingPageView />} />
+          <Route path="/landing" element={<LandingPageView />} />
+          <Route path="/login" element={<LoginView />} />
+          <Route path="/register" element={<RegisterView />} />
           <Route path="/product" element={<ProductView />} />
+          <Route path="/cart" element={<CartView />} />
         </Route>
-        <Route path="/login" element={<LoginView />} />
-        <Route path="/register" element={<RegisterView />} />
-
+        <Route path="/" element={<HomeView />} />
       </Routes>
     </BrowserRouter>
   );
