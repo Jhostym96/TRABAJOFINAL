@@ -21,12 +21,12 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path="/landing" element={<LandingPageView />} />
-          <Route path="/login" element={<LoginView />} />
-          <Route path="/register" element={<RegisterView />} />
+          <Route path="/" element={<LandingPageView />} />
           <Route path="/product" element={<ProductView />} />
         </Route>
-        <Route path="/" element={<HomeView />} />
+        <Route path="/login" element={<LoginView />} />
+        <Route path="/register" element={<RegisterView />} />
+
       </Routes>
     </BrowserRouter>
   );

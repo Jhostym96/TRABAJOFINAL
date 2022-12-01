@@ -33,7 +33,7 @@ const Login = () => {
     }
 
 
-    const  inicio = await login(user.email,user.password);
+    const inicio = await login(user.email, user.password);
 
     console.log(inicio);
 
@@ -55,7 +55,7 @@ const Login = () => {
     <div className="container__login">
       <div className="card__login">
         <div className="login__headers">
-          <img src={logo} alt="#" />
+          <Link to="/"><img src={logo} /></Link>
           <h2>Login</h2>
         </div>
         <div className="login__body">

@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import logo from "../../image/Logotipo.png";
 
 const MainLayout = () => {
+
+
+  const user = JSON.parse(localStorage.getItem("user"))
+
+  console.log(user);
+
+
   return (
     <div>
       <nav
@@ -43,11 +50,7 @@ const MainLayout = () => {
                 </Link>
               </li>
 
-              <li className="nav-item">
-                <Link className="nav-link" to={"/login"}>
-                  Login
-                </Link>
-              </li>
+
               <li className="nav-item">
                 <a className="nav-link" href="#services">
                   Services
@@ -68,13 +71,23 @@ const MainLayout = () => {
                   Contact
                 </a>
               </li>
+
+              <li className="nav-item">
+                < Link className="nav-link" to={"/login"}>
+                  Login
+                </Link>
+              </li>
+
+
+
+
             </ul>
           </div>
         </div>
-      </nav>
+      </nav >
 
       <Outlet />
-    </div>
+    </div >
   );
 };
 
