@@ -87,6 +87,10 @@ const MainLayout = () => {
       </nav >
 
       <Outlet />
+
+    {/* FOOTER de aqui */}
+    
+    {/* Hasta aqui */}
     </div >
   );
 };
