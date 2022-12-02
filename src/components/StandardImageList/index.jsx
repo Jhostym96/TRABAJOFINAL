@@ -50,7 +50,7 @@ export default function StandardImageList() {
 
 const itemData = [
   {
-    img: "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/OMMU2C3O4JDOBFFQ456PXNF3EU.jpg",
+    img: "{https://cloudfront-us-east-1.images.arcpublishing.com/infobae/OMMU2C3O4JDOBFFQ456PXNF3EU.jpg}",
     title: "Stadium",
   },
   {

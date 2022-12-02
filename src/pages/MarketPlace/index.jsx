@@ -49,7 +49,7 @@ const MarketPlace = () => {
                       </Typography>
                     </CardContent>
                     <CardActions>
-                      <Button fullWidth variant="contained">
+                      <Button href={`/product/${stadium.id}`} fullWidth variant="contained">
                         Reservar <AccessTimeIcon style={{ marginLeft: 10 }} />
                       </Button>
                     </CardActions>
@@ -68,10 +68,17 @@ export default MarketPlace;
 {
   /* {stadium !== null ? (
         stadium.map(stadium => (
+
+
+          
           <div key={stadium.id}>
             <a href={`/market/${stadium.id}`}>{stadium.name}</a>
             <img src={stadium.image} alt="#" />
           </div>
+
+
+
+
         ))
       ) : ("no hay datos")} */
 }

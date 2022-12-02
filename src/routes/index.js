@@ -26,13 +26,12 @@ const Router = () => {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<LandingPageView />} />
-          <Route path="/product" element={<ProductView />} />
           <Route path="/cart" element={<CartView />} />
           <Route path="/FormContact" element={<FormContactView />} />
+          <Route path="/product/:id" element={<ProductView />} />
         </Route>
         <Route element={<AdminLayout />}>
           <Route path="/market" element={<MarketplaceView />} />
-          <Route path="/market/:id" element={<StadiumView />} />
         </Route>
         <Route path="/login" element={<LoginView />} />
         <Route path="/register" element={<RegisterView />} />
