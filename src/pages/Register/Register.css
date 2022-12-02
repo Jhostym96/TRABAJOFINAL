@@ -16,7 +16,7 @@
 .box__register{
   background-color: rgb(247, 247, 253);
   width: 400px;
-  height: 500px;
+  height: auto;
   border-radius: 15px;
 
   align-items: center;
