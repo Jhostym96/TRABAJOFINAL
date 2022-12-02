@@ -12,10 +12,10 @@ import {
   ProductView,
   CartView,
   MarketplaceView,
-  StadiumView
+  StadiumView,
 } from "../pages";
 
-import { MainLayout } from "../layout";
+import { MainLayout, AdminLayout } from "../layout";
 
 // path => Nombre de la ruta /, /login, /registro
 
@@ -24,21 +24,16 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path="/landing" element={<LandingPageView />} />
+          <Route path="/" element={<LandingPageView />} />
           <Route path="/product" element={<ProductView />} />
           <Route path="/cart" element={<CartView />} />
-          <Route path="/market" element={<MarketplaceView />} />
-
-
-
         </Route>
-        <Route path="/market/:id" element={<StadiumView />} />
-
-
-
+        <Route element={<AdminLayout />}>
+          <Route path="/market" element={<MarketplaceView />} />
+          <Route path="/market/:id" element={<StadiumView />} />
+        </Route>
         <Route path="/login" element={<LoginView />} />
         <Route path="/register" element={<RegisterView />} />
-        <Route path="/" element={<HomeView />} />
       </Routes>
     </BrowserRouter>
   );

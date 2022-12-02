@@ -7,7 +7,6 @@ import logo from "../../image/Logotipo.png";
 import "./Login.css";
 
 const Login = () => {
-
   const { login, isAuth } = useContext(AuthContext);
 
   const [user, setUser] = useState({
@@ -32,7 +31,6 @@ const Login = () => {
       return;
     }
 
-
     const inicio = await login(user.email, user.password);
 
     console.log(inicio);
@@ -48,51 +46,50 @@ const Login = () => {
   };
 
   if (isAuth()) {
-    return <Navigate to="/" />
+    return <Navigate to="/market" />;
   }
 
   return (
     <div className="container__login">
       <div className="card__login">
         <div className="login__headers">
-          <Link to="/"><img src={logo} /></Link>
+          <Link to="/">
+            <img src={logo} />
+          </Link>
           <h2>Login</h2>
         </div>
         <div className="login__body">
           <form action="">
             <label htmlFor="">Usuario</label>
             <input
-              type="text" placeholder="Ingrese su usuario"
+              type="text"
+              placeholder="Ingrese su usuario"
               name="email"
               value={user.email}
               onChange={handleInputChange}
             />
             <label htmlFor="">Password</label>
             <input
-              type="password" placeholder="Ingrese su contraseña"
+              type="password"
+              placeholder="Ingrese su contraseña"
               name="password"
               value={user.password}
               onChange={handleInputChange}
-
             />
           </form>
         </div>
         <div className="login__footer">
-
-          <button
-            onClick={handleLogin}
-          >INGRESAR</button>
+          <button onClick={handleLogin}>INGRESAR</button>
 
           <input type="button" value="¿Olvidaste tu contraseña?" />
 
           <Link to="/register" className="my-3 btn btn-link">
             ¡Registrate AQUI!
           </Link>
-
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Login;
