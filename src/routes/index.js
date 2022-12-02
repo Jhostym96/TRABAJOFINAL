@@ -13,6 +13,7 @@ import {
   CartView,
   MarketplaceView,
   StadiumView,
+  FormContactView,
 } from "../pages";
 
 import { MainLayout, AdminLayout } from "../layout";
@@ -27,6 +28,7 @@ const Router = () => {
           <Route path="/" element={<LandingPageView />} />
           <Route path="/product" element={<ProductView />} />
           <Route path="/cart" element={<CartView />} />
+          <Route path="/FormContact" element={<FormContactView />} />
         </Route>
         <Route element={<AdminLayout />}>
           <Route path="/market" element={<MarketplaceView />} />

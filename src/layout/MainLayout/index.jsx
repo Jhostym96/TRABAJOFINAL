@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
 import logo from "../../image/Logotipo.png";
-
+import "./index.css";
 const MainLayout = () => {
 
 
@@ -52,23 +52,23 @@ const MainLayout = () => {
 
 
               <li className="nav-item">
-                <a className="nav-link" href="#services">
-                  Services
+                <a className="nav-link" href="#Servicios">
+                  Servicios
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#portfolio">
-                  Portfolio
+                <a className="nav-link" href="#Proyectos">
+                  Proyectos
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#team">
-                  Team
+                <a className="nav-link" href="#Nosotros">
+                  Nosotros
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#contact">
-                  Contact
+                <a className="nav-link" href="#Contactos">
+                  Contactos
                 </a>
               </li>
 
@@ -89,7 +89,47 @@ const MainLayout = () => {
       <Outlet />
 
     {/* FOOTER de aqui */}
-    
+    <footer id="Contactanos" className="pie-pagina">
+        <div className="grupo-1">
+          <div className="box">
+            <figure>
+              <a href="#">
+                <img src={logo} alt="Logo" />
+              </a>
+            </figure>
+          </div>
+          <div className="box">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+              ipsa?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+              ipsa?
+            </p>
+            {/* DIEGO AGREGO EL BOTON LINK PARA EL FORMULARIO  */}
+            <Link to="/FormContact" className="my-3 btn btn-link">
+              CONTACTANOS CON NOSOTROS!
+            </Link>
+          </div>
+          <div className="box">
+            <h2>SIGUENOS</h2>
+            <div className="red-social">
+              <a href="#" className="fa fa-facebook"></a>
+              <a href="#" className="fa fa-instagram"></a>
+              <a href="#" className="fa fa-twitter"></a>
+              <a href="#" className="fa fa-youtube"></a>
+            </div>
+          </div>
+        </div>
+        <div className="grupo-2">
+          <small>
+            &copy; 2022 <b>Campeonato Ex Alumnos</b> - Todos los Derechos
+            Reservados.
+          </small>
+        </div>
+      </footer>
     {/* Hasta aqui */}
     </div >
   );

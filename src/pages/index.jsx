@@ -10,8 +10,8 @@ export { default as ProductView } from "./Product";
 
 export { default as CartView } from "./Cart";
 
-export { default as MarketplaceView} from "./MarketPlace";
+export { default as MarketplaceView } from "./MarketPlace";
 
-export { default as StadiumView} from "./Stadium";
+export { default as FormContactView } from "./FormContact";
 
-
+export { default as StadiumView } from "./Stadium";
