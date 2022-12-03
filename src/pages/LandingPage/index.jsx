@@ -240,7 +240,7 @@ function LandingPage() {
                     alt=""
                     className="img-fluid rounded-circle"
                   />
-                  <h3 className="card-title py-2">Josthym</h3>
+                  <h3 className="card-title py-2">Jhostym Rosas</h3>
                   <p className="card-text">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Sequi ipsam nostrum illo tempora esse quibusdam.
@@ -262,7 +262,7 @@ function LandingPage() {
                     alt=""
                     className="img-fluid rounded-circle"
                   />
-                  <h3 className="card-title py-2">Arnol</h3>
+                  <h3 className="card-title py-2">Arnold Gallegos</h3>
                   <p className="card-text">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Sequi ipsam nostrum illo tempora esse quibusdam.

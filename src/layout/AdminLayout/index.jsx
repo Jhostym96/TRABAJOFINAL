@@ -3,12 +3,9 @@ import { Link } from "react-router-dom";
 import logo from "../../image/Logotipo.png";
 import "./index.css";
 const AdminLayout = () => {
-
-
-  const user = JSON.parse(localStorage.getItem("user"))
+  const user = JSON.parse(localStorage.getItem("user"));
 
   console.log(user);
-
 
   return (
     <div>
@@ -23,7 +20,7 @@ const AdminLayout = () => {
               src={logo}
               alt=""
             />
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="/">
               <span className="text-success">Aquila tu</span> CANCHA
             </a>
           </div>
@@ -45,51 +42,46 @@ const AdminLayout = () => {
           >
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" to={"/landing"}>
+                <a className="nav-link" href="/#">
                   Home
-                </Link>
+                </a>
               </li>
 
-
               <li className="nav-item">
-                <a className="nav-link" href="#Servicios">
+                <a className="nav-link" href="/#Servicios">
                   Servicios
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#Proyectos">
+                <a className="nav-link" href="/#Proyectos">
                   Proyectos
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#Nosotros">
+                <a className="nav-link" href="/#Nosotros">
                   Nosotros
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#Contactos">
+                <a className="nav-link" href="/#Contactos">
                   Contactos
                 </a>
               </li>
 
               <li className="nav-item">
-                < Link className="nav-link" to={"/login"}>
+                <Link className="nav-link" to={"/login"}>
                   Login
                 </Link>
               </li>
-
-
-
-
             </ul>
           </div>
         </div>
-      </nav >
+      </nav>
 
       <Outlet />
 
-    {/* FOOTER de aqui */}
-    <footer id="Contactanos" className="pie-pagina">
+      {/* FOOTER de aqui */}
+      <footer id="Contactanos" className="pie-pagina">
         <div className="grupo-1">
           <div className="box">
             <figure>
@@ -130,8 +122,8 @@ const AdminLayout = () => {
           </small>
         </div>
       </footer>
-    {/* Hasta aqui */}
-    </div >
+      {/* Hasta aqui */}
+    </div>
   );
 };
 
