@@ -14,30 +14,23 @@ import { DatePicker, ListElementsProducts } from "../../components";
 import StandardImageList from "../../components/StandardImageList";
 import StartsRating from "../../components/StartsRating";
 
-
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
 import { unicoProducto } from "../../services/funciones";
 
-
 const Products = () => {
-
   const [stadium, setStadium] = useState(null);
 
   const params = useParams();
 
   useEffect(() => {
-    unicoProducto(params.id, setStadium)
-  }, [])
-
-
+    unicoProducto(params.id, setStadium);
+  }, []);
 
   return (
-
     <>
       {stadium !== null ? (
-
-        <Container >
+        <Container>
           <Grid container spacing={3}>
             <Grid item xs={12} md={12}>
               {/* Image CARD */}
@@ -57,20 +50,7 @@ const Products = () => {
             </Grid>
             <Grid item xs={12} md={7}>
               <Card style={{ padding: 10 }}>
-                <Typography variant="h4">
-                  <Box
-                    component="img"
-                    sx={{
-                      height: 30,
-                      width: 30,
-                      maxHeight: { xs: 1, md: 1 },
-                      maxWidth: { xs: 1, md: 1 },
-                    }}
-                    alt="The house from the offer."
-                    src="https://assets.stickpng.com/images/584a9b47b080d7616d298778.png"
-                  ></Box>
-                  {stadium.name}⚽
-                </Typography>
+                <Typography variant="h4">{stadium.name}⚽</Typography>
                 <Typography>
                   Propio de : <span>{stadium.supplier}</span>{" "}
                 </Typography>
@@ -80,12 +60,13 @@ const Products = () => {
                   Descripcion
                 </Typography>
                 <Typography>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                  cum quidem saepe, quo tenetur praesentium ratione assumenda et
-                  exercitationem nostrum rem suscipit ab expedita, eum repellendus.
-                  Eum eos placeat molestias.quidem saepe, quo tenetur praesentium
-                  ratione assumenda et exercitationem nostrum rem suscipit ab
-                  expedita, eum repellendus. Eum eos placeat molestias.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Maiores cum quidem saepe, quo tenetur praesentium ratione
+                  assumenda et exercitationem nostrum rem suscipit ab expedita,
+                  eum repellendus. Eum eos placeat molestias.quidem saepe, quo
+                  tenetur praesentium ratione assumenda et exercitationem
+                  nostrum rem suscipit ab expedita, eum repellendus. Eum eos
+                  placeat molestias.
                 </Typography>
                 <Box mt={1.5} mb={1}>
                   <Grid container spacing={3}>
@@ -142,14 +123,11 @@ const Products = () => {
             </Grid>
           </Box>
         </Container>
-
-
-
-
-      ) : ("no hay stadio")}
+      ) : (
+        "no hay stadio"
+      )}
     </>
   );
 };
-
 
 export default Products;
