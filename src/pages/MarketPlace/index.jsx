@@ -8,21 +8,31 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+
 import { useNavigate } from "react-router-dom";
 
+
+
+
 const MarketPlace = () => {
-  const history = useNavigate();
+
+  
   const [stadium, setStadium] = useState(null);
+
+  const history = useNavigate();
+
 
   const validateIsLogged = () => {
     const user = JSON.parse(localStorage.getItem("user"));
-    if (user) history("/market");
+    if (!user) history("/login");
   };
 
+
   useEffect(() => {
-    todoslosEstadios(setStadium);
     validateIsLogged();
+    todoslosEstadios(setStadium);
   }, []);
+
 
   return (
     <>
@@ -65,20 +75,3 @@ const MarketPlace = () => {
 
 export default MarketPlace;
 
-{
-  /* {stadium !== null ? (
-        stadium.map(stadium => (
-
-
-          
-          <div key={stadium.id}>
-            <a href={`/market/${stadium.id}`}>{stadium.name}</a>
-            <img src={stadium.image} alt="#" />
-          </div>
-
-
-
-
-        ))
-      ) : ("no hay datos")} */
-}

@@ -37,7 +37,7 @@ function Register() {
 
   const validateIsLogged = () => {
     const user = JSON.parse(localStorage.getItem("user"));
-    if (user) history("/");
+    if (user) history("/market");
   };
 
   useEffect(() => {

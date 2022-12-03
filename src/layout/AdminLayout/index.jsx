@@ -2,10 +2,28 @@ import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
 import logo from "../../image/Logotipo.png";
 import "./index.css";
-const AdminLayout = () => {
-  const user = JSON.parse(localStorage.getItem("user"));
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
-  console.log(user);
+
+const AdminLayout = () => {
+
+  const history = useNavigate();
+
+  const logout = () => {
+    localStorage.clear()
+  }
+
+
+  const validateIsLogged = () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (!user) history("/login");
+  };
+
+  useEffect(() => {
+    validateIsLogged();
+  }, []);
+
 
   return (
     <div>
@@ -69,9 +87,9 @@ const AdminLayout = () => {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to={"/login"}>
-                  Login
-                </Link>
+                <a className="nav-link" onClick={logout} href="/login" >
+                  Logout
+                </a>
               </li>
             </ul>
           </div>
